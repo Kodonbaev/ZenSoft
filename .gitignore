@@ -1,0 +1,4 @@
+# ignore IDE setting files
+.idea/*
+node_modules
+*.psd

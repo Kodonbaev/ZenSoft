@@ -1,0 +1,230 @@
+@import mixins
+body
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+	line-height: 1.3
+	font-size: 13px
+.container
+	max-width: 1400px
+	width: 100%
+	margin: 0 auto
+.header
+	background: #5682a3
+	text-align: justify
+	margin-bottom: 30px
+	@extend %clearfix
+.footer
+	background: #3e4749
+	text-align: center
+.menu
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: left
+	width: 100%
+	z-index: 10
+	+tablet
+		display: block
+		border: none
+		text-align: left
+		width: 50%
+		float: left
+		&::before
+			width: 0
+			height: 0
+			border-top: 5px solid #fff
+			border-bottom: 5px solid #fff
+			border-left: 5px solid #fff
+	a
+		text-align: center
+		width: 11%
+		display: inline-block
+		box-sizing: border-box
+		padding: 10px 
+		margin: 10px 0
+		text-decoration: none
+		color: #211b1b
+		font-size: 18px
+		border-left: 1px solid #ccc
+		+tablet
+			text-align: left
+			width: 100%
+			margin: 0
+			padding: 10px
+			border: 1px solid #d9d9d9
+			border-radius: 3px
+
+		&:hover
+			background: #30536d
+		&:last-child
+			border-right: 1px solid #ccc
+			+tablet
+				border-right: none
+.menu_2
+	display: none
+	+tablet
+		display: block
+		float: left
+		width: 50%
+.content
+	color: #000
+	font-size: 20px
+.promo
+	margin-bottom: 30px
+	background:
+		image: url(../images/bg-header.png)
+		repeat: no-repeat
+		position: center center
+	@extend %clearfix
+	&__box1
+		float: left
+		width: 30%
+		+tablet
+			float: none
+			width: 100%
+			text-align: center
+		img
+			width: 100%
+			height: auto
+		
+	&__box2
+		float: left
+		width: 67%
+		padding: 20px 
+		box-sizing: border-box
+		+tablet
+			float: none
+			width: 100%	
+.gallery
+	background:
+		image: url(../images/bg-footer.png)
+		repeat: no-repeat
+		position: center center
+	margin-bottom: 30px
+	@extend %clearfix
+	&__box1
+		float: right
+		width: 30%
+		img
+			width: 100%
+			height: auto
+		+tablet
+			float: none
+			width: 100%
+			display: inline-block
+			text-align: center
+	&__box2
+		float: left	
+		width: 67%
+		padding: 20px 
+		box-sizing: border-box
+		+tablet
+			float: none
+			width: 100%
+.btn-block
+	text-align: center		
+	.btn 	
+		float: left
+		display: inline-block
+		padding: 8px 26px 9px 29px
+		font-size: 12px
+		line-height: 14px
+		border: none
+		cursor: pointer
+		margin: 10px
+		border-radius: 2px
+		&:focus
+			outline: none
+.btn-red
+	color: #b42825
+	text-shadow: 0px 1px 2px rgba(228, 124, 121, 0.5)
+	background: #e37875
+	background: -moz-linear-gradient(top, #e37875 0%, #cf4442 100%)
+	background: -webkit-linear-gradient(top, #e37875 0%,#cf4442 100%)
+	background: linear-gradient(to bottom, #e37875 0%,#cf4442 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e37875', endColorstr='#cf4442',GradientType=0 )
+	&:hover
+		background: #d04543
+		background: -moz-linear-gradient(top, #d04543 0%, #e37875 100%)
+		background: -webkit-linear-gradient(top, #d04543 0%,#e37875 100%)
+		background: linear-gradient(to bottom, #d04543 0%,#e37875 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d04543', endColorstr='#e37875',GradientType=0 )
+.btn-blue
+	color: #007dc1
+	text-shadow: 0px 1px 1px rgba(160, 215, 237, 0.5)
+	border: 1px solid #81c8e3
+	background: #9fd8ed
+	background: -moz-linear-gradient(top, #9fd8ed 0%, #6fbddf 100%)
+	background: -webkit-linear-gradient(top, #9fd8ed 0%,#6fbddf 100%)
+	background: linear-gradient(to bottom, #9fd8ed 0%,#6fbddf 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9fd8ed', endColorstr='#6fbddf',GradientType=0 )
+	&:hover
+		background: #6fbddf
+		background: -moz-linear-gradient(top, #6fbddf 0%, #9fd8ed 100%)
+		background: -webkit-linear-gradient(top, #6fbddf 0%,#9fd8ed 100%)
+		background: linear-gradient(to bottom, #6fbddf 0%,#9fd8ed 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6fbddf', endColorstr='#9fd8ed',GradientType=0 )
+
+.wrap-contact
+	text-align: center
+.contact
+	display: inline-block
+	width: 100%
+	background: #d2d7db
+	margin-top: 30px
+	border-radius: 5px
+	background: -moz-linear-gradient(top,  #d2d7db 0%, #79a0a9 100%, #7db9e8 100%)
+	background: -webkit-linear-gradient(top,  #d2d7db 0%,#79a0a9 100%,#7db9e8 100%)
+	background: linear-gradient(to bottom,  #d2d7db 0%,#79a0a9 100%,#7db9e8 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2d7db', endColorstr='#7db9e8',GradientType=0 )
+	span
+		font-size: 13px
+		color: #383e4a
+		padding: 0 20px
+	form
+		margin: 30px
+	input
+		width: 100%
+		border: none
+		border-radius: 4px
+		padding: 10px
+		margin: 5px 0 5px
+		font-size: 18px
+	textarea
+		font-size: 18px
+		width: 100%
+		border: none
+		border-radius: 4px
+		padding: 20px
+		margin: 5px 0 5px
+	input[type=submit]
+		width: 20%
+		background: #36aeea
+		color: #fff
+		font-size: 20px
+		margin: 0 30px
+		text-transform: uppercase
+		padding: 15px
+		cursor: pointer
+		font-weight: bold
+		+tablet
+			width: 100%
+			margin: 10px 0
+	input[type=reset]
+		width: 20%
+		background: #36aeea
+		color: #fff
+		font-size: 20px
+		margin: 0 30px
+		text-transform: uppercase
+		padding: 15px
+		cursor: pointer
+		font-weight: bold
+		+tablet
+			width: 100%
+			margin: 10px 0
+.contact-main
+	text-transform: uppercase
+	font-size: 2em
+	margin: 32px 10px 4px
+	color: #36aeea
+
