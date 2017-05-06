@@ -16,8 +16,7 @@ body {
 
 .header {
   background: #5682a3;
-  text-align: justify;
-  margin-bottom: 30px; }
+  text-align: justify; }
 
 .footer {
   background: #3e4749;
@@ -29,7 +28,8 @@ body {
   align-items: center;
   text-align: left;
   width: 100%;
-  z-index: 10; }
+  z-index: 10;
+  position: relative; }
 @media screen and (max-width: 767px) {
   .menu {
     display: block;
@@ -62,21 +62,50 @@ body {
     padding: 10px;
     border: 1px solid #d9d9d9;
     border-radius: 3px; } }
-.menu a:hover {
-  background: #30536d; }
 .menu a:last-child {
   border-right: 1px solid #ccc; }
 @media screen and (max-width: 767px) {
   .menu a:last-child {
     border-right: none; } }
+.menu a:hover {
+  background: #30536d; }
+.menu:hover + .menu_2 {
+  display: block; }
 
 .menu_2 {
-  display: none; }
+  position: absolute;
+  top: 55px;
+  left: 0;
+  display: none;
+  width: 100%;
+  background: #5682a3;
+  transition: all 0.5s ease-in-out; }
+.menu_2:hover {
+  display: block; }
 @media screen and (max-width: 767px) {
   .menu_2 {
     display: block;
     float: left;
     width: 50%; } }
+.menu_2 a {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 0;
+  text-decoration: none;
+  color: #211b1b;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc; }
+.menu_2 a:last-child {
+  border-right: 1px solid #ccc; }
+@media screen and (max-width: 767px) {
+  .menu_2 a:last-child {
+    border-right: none; } }
+.menu_2 a:hover {
+  background: #30536d; }
 
 .content {
   color: #000;
